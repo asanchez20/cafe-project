@@ -11,7 +11,7 @@ function MenuCard({coffee}) {
             </div>
                 <div className="description">{coffee.description}</div>
                 <p className="coffee-price">${coffee.price}0</p>
-            <button className="add-to-cart" onClick= {<Cart coffee={coffee} />}>Add To Cart</button>
+            <button className="add-to-cart">Add To Cart</button>
         </div>
     )
 }
