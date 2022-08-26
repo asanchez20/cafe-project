@@ -78,3 +78,10 @@ button.badge{
 .text-right{
   text-align: right;
 }
+
+.block-about{
+  background-color: #9a2f2f;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
