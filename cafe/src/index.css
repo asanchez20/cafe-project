@@ -4,10 +4,13 @@ body{
 
 h1, h2, h3 { 
   margin: 0.5rem; 
+  width: 100%;
+  align-items: center;
+
   
 }
 h1{
-  font-size: 1.5rem;
+  font-size: 2rem;
 
 }
 h2{
@@ -46,7 +49,7 @@ a{
 }
 
 img.small {
-  max-height: 7rem;
+  max-height: 10rem;
 }
 
 button {
@@ -56,7 +59,7 @@ button {
   border-radius: 0.5rem;
   border: 0.1rem #404040 solid;
   background-color: #f0c040;
-  width: 100%;
+  width: 10%;
   cursor: pointer;
 }
 
@@ -82,8 +85,19 @@ button.badge{
 }
 
 .block-about{
-  background-color: #9a2f2f;
+  background-color: #7b7373;
   padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
+  margin: 10rem;
+  border-radius: 0rem;
+  font-weight: 700;
+  font-size: 24px
+}
+
+.block-aboutt{
+  background-color: #7b7373;
+  padding: 1rem;
+  margin: 10rem;
+  border-radius: 0rem;
+  font-weight: 700;
+  font-size: 24px
 }
