@@ -38,7 +38,7 @@ function Home(){
               setCartItems([...cartItems, {...filteredCoffees, qty: 1}])
             }
           }
-          const onRemove = ( coffees) => {
+          const onRemove = (filteredCoffees) => {
             const exist = cartItems.find((x) => x.id === filteredCoffees.id)
             if(exist.qty === 1){
               setCartItems(cartItems.filter((x) => x.id !== filteredCoffees.id))
