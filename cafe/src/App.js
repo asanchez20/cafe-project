@@ -6,7 +6,6 @@ import Home from "./components/Home";
 function App() {
 
   const [page, setPage] = useState("/")
-  
 
   function getCurrentPage(){
     switch(page) {

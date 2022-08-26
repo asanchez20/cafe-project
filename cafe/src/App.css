@@ -52,3 +52,6 @@ body{
   color: red
 }
 
+.cart{
+  align-items: flex-end;
+}

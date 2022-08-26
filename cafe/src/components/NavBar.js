@@ -6,9 +6,9 @@ function NavBar({onChangePage}){
         onChangePage(e.target.pathname)
     }
     return(
-        <header>
+        <header className="row block center">
         <nav>
-            <a onClick={handleLinkClick} href="/">Home</a>
+            <a onClick={handleLinkClick} href="/">Home</a> 
             <a onClick={handleLinkClick} href="/cart">Cart</a>
         </nav>
         </header>

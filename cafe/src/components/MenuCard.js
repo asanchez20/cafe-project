@@ -1,17 +1,13 @@
 import React from "react";
-import Cart from "./Cart";
-function MenuCard({coffee}) { 
+// import Cart from "./Cart";
+function MenuCard({coffee, onAdd}) { 
     return(
-        <div className="coffee-card">
-            <div className="image">
-                <img alt="img" src={coffee.image} />
-            </div>
-            <div className="content">
-                <div className="header">{coffee.name}</div>
-            </div>
-                <div className="description">{coffee.description}</div>
-                <p className="coffee-price">${coffee.price}0</p>
-            <button className="add-to-cart">Add To Cart</button>
+        <div>
+            <img  className = "small" alt="img" src={coffee.image} />
+            <h3>{coffee.name}</h3>
+            <h3>{coffee.description}</h3>
+            <div>${coffee.price}</div>
+            <button onClick={() => onAdd(coffee)}>Add To Cart</button>
         </div>
     )
 }
