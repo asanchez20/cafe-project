@@ -53,6 +53,7 @@ function Home(){
 
     return(
         <main className="block col-2">
+        <h1>Double A Cafe</h1>
         <h2>Menu</h2>
         <SearchBar searchString ={searchString} setSearchString = {setSearchString}/>
         <div className="row">
