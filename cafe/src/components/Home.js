@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import MenuCard from "./MenuCard";
+import Cart from "./Cart";
 function Home(){
         const [coffees, setCoffee] = useState([])
         const [cartItems, setCartItems] = useState([])
@@ -8,14 +9,25 @@ function Home(){
           .then(resp => resp.json())
           .then(setCoffee)
         },[])
-        const onAdd = (coffee) => {
-            const exist = cartItems.find(x => x.id === coffee.id)
+        const onAdd = (coffees) => {
+            const exist = cartItems.find(x => x.id === coffees.id)
             if(exist) {
-              setCartItems(cartItems.map(x => x.id === coffee.id ? {...exist, qty: exist.qty +1} : x
+              setCartItems(cartItems.map(x => x.id === coffees.id ? {...exist, qty: exist.qty +1} : x
                 )
               );
             } else {
-              setCartItems([...cartItems, {...coffee, qty: 1}])
+              setCartItems([...cartItems, {...coffees, qty: 1}])
+            }
+          }
+          const onRemove = ( coffees) => {
+            const exist = cartItems.find((x) => x.id === coffees.id)
+            if(exist.qty === 1){
+              setCartItems(cartItems.filter((x) => x.id !== coffees.id))
+            } else {
+              setCartItems(
+                cartItems.map((x) => x.id === coffees.id ? {...exist, qty: exist.qty - 1} : x
+                )
+              );
             }
           }
     return(
@@ -23,10 +35,10 @@ function Home(){
         <h2>Menu</h2>
         <div className="row">
         {coffees.map(coffee => <MenuCard coffee={coffee} key={coffee.id} onAdd={onAdd} />)}
-        {onAdd}
+        <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} /> 
         </div>
-        
         </main>
+        
     )
 }
 
