@@ -1,8 +1,8 @@
 import React, { useState }  from "react"
 import './App.css';
 import NavBar from "./components/NavBar";
-import Cart from "./components/Cart";
 import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
 function App() {
 
   const [page, setPage] = useState("/")
@@ -11,8 +11,8 @@ function App() {
     switch(page) {
       case "/" : 
         return <Home />
-      case "/cart" :
-        return <Cart />
+      case "/About" :
+        return <AboutUs/>
       default:
         return <h1>404 Not Found</h1>
     }

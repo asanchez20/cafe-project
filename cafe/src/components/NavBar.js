@@ -10,7 +10,7 @@ function NavBar({onChangePage, countCartItems}){
         <header className="row block center">
         <nav>
             <a onClick={handleLinkClick} href="/">Home</a> 
-            <a onClick={handleLinkClick} href="/cart">Cart</a>
+            <a onClick={handleLinkClick} href="/About">About Us</a>
         </nav>
         
         </header>
